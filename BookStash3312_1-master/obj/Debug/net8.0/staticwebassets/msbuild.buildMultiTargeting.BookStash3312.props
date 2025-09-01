@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BookStash3312.props" />
+</Project>

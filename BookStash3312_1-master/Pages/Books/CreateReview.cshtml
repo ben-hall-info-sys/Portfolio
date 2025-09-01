@@ -1,0 +1,28 @@
+@page
+@model BookStash3312.Pages.Reviews.CreateReviewModel
+@{
+    ViewData["Title"] = "Create Review";
+}
+
+<h1>Create Review</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="ReviewText" class="control-label"></label>
+        <input asp-for="ReviewText" class="form-control" />
+        <span asp-validation-for="ReviewText" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rating" class="control-label"></label>
+        <input asp-for="Rating" class="form-control" />
+        <span asp-validation-for="Rating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BookId" class="control-label"></label>
+        <select asp-for="BookId" asp-items="Model.BookList" class="form-control">
+            <option value="">-- Select a Book --</option>
+        </select>
+        <span asp-validation-for="BookId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
